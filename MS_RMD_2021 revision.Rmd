@@ -1311,9 +1311,9 @@ p_1C = ggplot(PlaceboRR, aes(x=year, y=rate, colour=TorUT))+
                       values = c("Untreated"="red", "Treated"="green"))+
   scale_fill_manual("",values = c("Untreated"="red", "Treated"="green"))+
   scale_shape_manual("", values=c(19,17))+
-  theme(axis.text.x = element_blank(),axis.title.x=element_blank(),
+  theme(axis.text.x = element_text(size=8),
         text=element_text(size=12,family="Times"))+
-  annotate("text", x = 2012, y=0.02, 
+  annotate("text", x = 2009, y=0.01, 
            label = paste0("P-value for linear trend; Untreated ", 
                           ifelse(trend["Untreated Relapse Rate",3] < 0.0001, "< 0.0001", 
                                  sprintf("%4.1e",trend["Untreated Relapse Rate",3]))),family="Times")+
